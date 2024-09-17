@@ -1,19 +1,27 @@
-// JavaScript to handle changing text effect
-const texts = [
-    "Hi I'm {Lizzon-Vanique}",
-    "Hi I'm {a programmer}",
-    "Hi I'm {an animator}",
-    "Hi I'm {a data engineer}",
-    "Hi I'm {a game designer}"
-  ];
+document.addEventListener('DOMContentLoaded', function () {
+    const texts = ["Lizzon-Vanique", "A programmer", "An animator", "A data engineer", "A game designer"];
+    const typingText = document.getElementById('changing-text');
+    let currentTextIndex = 0;
   
-  let textIndex = 0;
-  const changingText = document.getElementById('changing-text');
+    function typeText(text, callback) {
+      let i = 0;
+      typingText.textContent = '';
+      const interval = setInterval(function () {
+        typingText.textContent += text.charAt(i);
+        i++;
+        if (i > text.length) {
+          clearInterval(interval);
+          setTimeout(callback, 1000); // Pause before starting next text
+        }
+      }, 100); // Adjust typing speed here
+    }
   
-  function changeText() {
-    changingText.textContent = texts[textIndex];
-    textIndex = (textIndex + 1) % texts.length;
-  }
+    function startTyping() {
+      typeText(texts[currentTextIndex], function () {
+        currentTextIndex = (currentTextIndex + 1) % texts.length;
+        startTyping();
+      });
+    }
   
-  // Change text every 2.5 seconds
-  setInterval(changeText, 2500);
+    startTyping();
+  });  
