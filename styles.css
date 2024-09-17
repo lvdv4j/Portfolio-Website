@@ -1,0 +1,82 @@
+/* Reset basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body, html {
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    color: white;
+    overflow: hidden;
+  }
+  
+  /* Navigation Bar */
+  .navbar {
+    position: fixed;
+    width: 100%;
+    background-color: rgba(50, 50, 50, 0.9);
+    padding: 1rem;
+  }
+  
+  .navbar ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .navbar ul li {
+    margin: 0 15px;
+  }
+  
+  .navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar ul li a:hover {
+    color: #f0f0f0;
+  }
+  
+  /* Home Section */
+  .home {
+    height: 100vh;
+    width: 100%;
+    background: url('https://drive.google.com/drive-viewer/AKGpihb1wF_4qdy9M7jwn3oLUXUSZrboNXHWpa3-TSy9zRxkfsBUwbj-JMjjQ-q4TF-nBDsK6yFHIEuiumcqGYe__obsKlMYubJoNOc=s1600-rw-v1') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  /* Dark overlay to slightly dim the background GIF */
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+  
+  /* Centered Changing Text */
+  .centered-text {
+    z-index: 2;
+    font-size: 2.5rem;
+    text-align: center;
+  }
+  
+  /* Animation for the changing text */
+  @keyframes fadeInOut {
+    0%, 100% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+  
