@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lizzon-Vanique Portfolio</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&display=swap" rel="stylesheet">
 </head>
 <body>
   <!-- Navigation Bar -->
@@ -19,16 +22,21 @@
 
   <!-- Home Section with Background Video and Changing Text -->
   <section class="home" id="home">
+    <div class="overlay"></div>
     <div class="video-container">
       <video autoplay loop muted playsinline>
-        <source src="https://raw.githubusercontent.com/lvdv4j/Portfolio-Website/main/res/Star%20Warp.mp4" type="video/mp4">
-        Your browser does not support the video tag.
+        <source src="https://github.com/lvdv4j/Portfolio-Website/blob/3433d44b123160db674622b8e28abada7900df8d/res/Star%20Warp.mp4" type="video/mp4">
       </video>
     </div>
-    <div class="overlay"></div>
+    <!-- Spaceship overlay image -->
+    <img src="https://raw.githubusercontent.com/lvdv4j/Portfolio-Website/3433d44b123160db674622b8e28abada7900df8d/res/Spaceship%20Overlay.png" alt="Spaceship Overlay" class="spaceship-overlay">
     <div class="centered-text">
-      <span class="static-text">Hi I'm</span>
-      <span class="typing-text" id="changing-text">Lizzon-Vanique</span>
+      <div class="text-container">
+        <div class="static-text">Hi I'm</div>
+        <div class="typing-wrapper">
+          <span class="typing-text" id="changing-text">Lizzon-Vanique</span>
+        </div>
+      </div>
     </div>
   </section>
 
