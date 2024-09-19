@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const texts = ["Lizzon-Vanique", "A programmer", "An animator", "A data engineer", "A game designer"];
+    const texts = ["Lizzon-Vanique", "A programmer", "An animator", "A data engineer", "A game designer", "A website developer"];
     const typingText = document.getElementById('changing-text');
     let currentTextIndex = 0;
   

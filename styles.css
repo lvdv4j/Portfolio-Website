@@ -8,11 +8,11 @@
 /* Navigation Bar */
 .navbar {
   position: fixed;
-  top: 0; /* Ensure it’s at the top */
+  top: 0;
   width: 100%;
-  background-color: #333; /* Dark grey color */
+  background-color: #333;
   padding: 1rem;
-  z-index: 1000; /* Ensure it’s on top of other content */
+  z-index: 1000;
 }
 
 .navbar ul {
@@ -46,6 +46,7 @@
   justify-content: center;
   align-items: center;
   position: relative;
+  overflow: hidden; /* Prevent overflow issues */
 }
 
 /* Video Container */
@@ -56,15 +57,15 @@
   width: 100%;
   height: 100%;
   display: flex;
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
-  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  z-index: 0; /* Ensure video is behind everything */
 }
 
 .video-container video {
-  min-width: 100%; /* Ensures the video covers the width */
-  min-height: 100%; /* Ensures the video covers the height */
-  object-fit: cover; /* Ensures the video maintains its aspect ratio while covering the entire section */
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
 }
 
 /* Spaceship Overlay Image */
@@ -74,10 +75,13 @@
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 2; /* Make sure it's on top of the video */
-  object-fit: cover; /* This ensures the image covers the whole video area */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2; /* Ensure it's on top of the video */
+  object-fit: cover; /* Ensure the image covers the video area */
+  pointer-events: none; /* Allow clicks to pass through if needed */
 }
-
 
 /* Dark overlay to slightly dim the background GIF */
 .overlay {
@@ -86,51 +90,51 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.25);
+  z-index: 3; /* Ensure it's above the video but below the overlay image */
 }
 
 /* Centered Text Container */
 .centered-text {
-  z-index: 2;
+  z-index: 3; /* Ensure it's above everything else */
   text-align: center;
   display: flex;
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
-  height: 100vh; /* Full viewport height */
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
   position: relative;
 }
 
 /* Text Container */
 .text-container {
-  position: relative; /* Establish a positioning context */
-  display: inline-block; /* Fit content */
+  position: relative;
+  display: inline-block;
 }
 
 /* Static Text */
 .static-text {
-  font-family: 'Handjet', cursive; /* Apply Handjet font */
-  color: gold; /* Set color to gold */
-  font-size: 3.2rem; /* Adjust font size */
-  text-transform: uppercase; /* Convert text to uppercase */
+  font-family: 'Handjet', cursive;
+  color: gold;
+  font-size: 4.2rem;
+  text-transform: uppercase;
 }
 
 /* Typing Wrapper */
 .typing-wrapper {
-  display: inline-block; /* Fit content */
-  margin-top: 0.5rem; /* Space between static and typing text */
+  display: inline-block;
+  margin-top: 0.5rem;
 }
 
 /* Typing Text */
 .typing-text {
-  font-size: 4rem;
+  font-size: 5rem;
   font-family: 'Handjet', cursive;
-  color: gold; /* Starting color */
+  color: gold;
   text-transform: uppercase;
   white-space: nowrap;
   overflow: hidden;
   border-right: .15em solid gold;
-  animation: typing 4s steps(30, end), blink-caret .75s step-end infinite, color-change 10s ease-in-out infinite; /* Added color-change animation */
+  animation: typing 4s steps(30, end), blink-caret .75s step-end infinite, color-change 10s ease-in-out infinite;
 }
 
 /* Typing effect */
@@ -159,13 +163,13 @@
     color: gold;
   }
   25% {
-    color: lightblue;
+    color: yellow;
   }
   50% {
-    color: lightgreen;
+    color: lightgoldenrodyellow;
   }
   75% {
-    color: pink;
+    color: lemonchiffon;
   }
   100% {
     color: gold;
