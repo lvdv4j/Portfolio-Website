@@ -11,14 +11,14 @@
   top: 0;
   width: 100%;
   background-color: #333;
-  padding: 1rem;
+  padding: 1.2rem;
   z-index: 1000;
 }
 
 .navbar ul {
   list-style-type: none;
   display: flex;
-  justify-content: center;
+  justify-content: left;
   margin: 0;
   padding: 0;
 }
@@ -35,7 +35,7 @@
 }
 
 .navbar ul li a:hover {
-  color: #f0f0f0;
+  color: #aaaaaa;
 }
 
 /* Home Section */
@@ -113,7 +113,7 @@
 
 /* Static Text */
 .static-text {
-  font-family: 'Handjet', cursive;
+  font-family: "Handjet", cursive;
   color: gold;
   font-size: 4.2rem;
   text-transform: uppercase;
@@ -128,13 +128,14 @@
 /* Typing Text */
 .typing-text {
   font-size: 5rem;
-  font-family: 'Handjet', cursive;
+  font-family: "Handjet", cursive;
   color: gold;
   text-transform: uppercase;
   white-space: nowrap;
   overflow: hidden;
-  border-right: .15em solid gold;
-  animation: typing 4s steps(30, end), blink-caret .75s step-end infinite, color-change 10s ease-in-out infinite;
+  border-right: 0.15em solid gold;
+  animation: typing 4s steps(30, end), blink-caret 0.75s step-end infinite,
+    color-change 10s ease-in-out infinite;
 }
 
 /* Typing effect */
@@ -149,7 +150,8 @@
 
 /* Blinking cursor */
 @keyframes blink-caret {
-  from, to {
+  from,
+  to {
     border-color: transparent;
   }
   50% {
