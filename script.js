@@ -83,7 +83,7 @@ function draw() {
 }
 
 // Loop the animation
-setInterval(draw, 33);
+setInterval(draw, 48);
 
 // Ensure canvas resizes correctly on window resize
 window.addEventListener('resize', function() {
