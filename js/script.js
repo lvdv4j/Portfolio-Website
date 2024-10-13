@@ -84,3 +84,7 @@ function draw() {
 
 // Loop the animation
 setInterval(draw, 48);
+
+document.getElementById('navbar-placeholder').innerHTML = fetch('includes/navbar.html')
+.then(response => response.text())
+.then(html => document.getElementById('navbar-placeholder').innerHTML = html);
