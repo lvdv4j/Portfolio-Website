@@ -12,12 +12,18 @@ html {
 
 /* Navigation Bar */
 .navbar {
+  display: flex;
+  align-items: center;
   position: fixed;
   top: 0;
   width: 100%;
   background-color: #333;
-  padding: 1.2rem;
   z-index: 1000;
+}
+
+.navbar .logo img {
+  height: 5rem;
+  width: auto;
 }
 
 .navbar ul {
