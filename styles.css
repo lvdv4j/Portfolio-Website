@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Handjet", cursive;
 }
 
 /* Navigation Bar */
@@ -113,7 +114,6 @@
 
 /* Static Text */
 .static-text {
-  font-family: "Handjet", cursive;
   color: #39ff14;
   font-size: 4.2rem;
   text-transform: uppercase;
@@ -129,7 +129,6 @@
 /* Typing Text */
 .typing-text {
   font-size: 5rem;
-  font-family: "Handjet", cursive;
   color: #39ff14;
   text-transform: uppercase;
   white-space: nowrap;
@@ -141,23 +140,60 @@
 
 /* About Me Section */
 .about-me {
-  height: 100vh;
+  min-height: 100vh; /* Ensure the section covers the full viewport */
   width: 100%;
-  font-family: "Handjet", cursive;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 4rem 2rem;
-  background-color: #1c1c1c;
+  background-color: transparent;
+}
+
+.matrix-rain{
+  position: relative; /* This is important to position the canvas correctly */
+  overflow: hidden;   /* Ensures no overflow if canvas goes outside the section */
+}
+
+.matrix-rain canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Make sure the canvas stays behind other content */
 }
 
 .about-content {
+  position: relative;
   display: flex;
   max-width: 1200px;
   width: 100%;
   align-items: center;
   gap: 2rem;
   flex-direction: row-reverse; /* Swap image and text positions */
+  z-index: 1;
+}
+
+/* Media query for screens smaller than 768px (typical mobile screens) */
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column; /* Stack video below text on smaller screens */
+    text-align: center; /* Optional: Center-align text */
+  }
+
+  .about-video, .about-text {
+    width: 100%; /* Ensure full width for both video and text */
+  }
+
+  .about-video video {
+    width: 70%; /* Adjust video width for smaller screens */
+    margin: 0 auto; /* Center video */
+  }
+
+  .btn-container{
+    flex-direction: column;
+  }
+
 }
 
 .about-text {
@@ -217,16 +253,14 @@
   left: 100%;
 }
 
-.about-image {
+.about-video {
   flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.about-image img {
-  max-width: 100%;
-  height: auto;
+.about-video video {
   border-radius: 15px;
 }
 
