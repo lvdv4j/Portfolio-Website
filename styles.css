@@ -180,6 +180,15 @@ html {
 
 /* Media query for screens smaller than 768px (typical mobile screens) */
 @media (max-width: 768px) {
+
+  .static-text{
+    font-size: 2rem;
+  }
+
+  .typing-text{
+    font-size: 2.5rem;
+  }
+
   .about-content {
     flex-direction: column; /* Stack video below text on smaller screens */
     text-align: center; /* Optional: Center-align text */
