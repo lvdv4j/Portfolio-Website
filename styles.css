@@ -1,4 +1,8 @@
 /* Reset basic styles */
+html {
+  scroll-behavior: smooth; /* Smooth scrolling */
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -31,7 +35,7 @@
 .navbar ul li a {
   text-decoration: none;
   color: white;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   transition: color 0.3s ease;
 }
 
@@ -262,6 +266,7 @@
 
 .about-video video {
   border-radius: 15px;
+  width: 70%;
 }
 
 /* animation effects */
