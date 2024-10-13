@@ -84,14 +84,3 @@ function draw() {
 
 // Loop the animation
 setInterval(draw, 48);
-
-// Ensure canvas resizes correctly on window resize
-window.addEventListener('resize', function() {
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
-  columns = canvas.width / fontSize; // Recalculate columns
-  drops = []; // Reset drops for new canvas size
-  for (var i = 0; i < columns; i++) {
-    drops[i] = 1;
-  }
-});
