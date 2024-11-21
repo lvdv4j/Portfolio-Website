@@ -14,10 +14,12 @@ html {
 .navbar {
   display: flex;
   align-items: center;
+  justify-content: space-between; /* Space between logo and other content */
   position: fixed;
   top: 0;
   width: 100%;
   background-color: #333;
+  padding: 0 1rem;
   z-index: 1000;
 }
 
@@ -29,9 +31,9 @@ html {
 .navbar ul {
   list-style-type: none;
   display: flex;
-  justify-content: left;
   margin: 0;
   padding: 0;
+  margin-right: auto;
 }
 
 .navbar ul li {
@@ -46,6 +48,23 @@ html {
 }
 
 .navbar ul li a:hover {
+  color: #aaaaaa;
+}
+
+.social-icons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.social-link {
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.social-link:hover {
   color: #aaaaaa;
 }
 
