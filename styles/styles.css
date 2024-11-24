@@ -420,15 +420,18 @@ to {
 .ring:nth-child(8) {
   transform: rotateY(4deg)  rotateX(75deg) scale(2);
   border-style: dashed;
+  color:greenyellow;
 }
 .ring:nth-child(9) {
   transform: rotateY(4deg)  rotateX(75deg) scale(1.75);
   border-style: solid;
+  color:lime;
 }
 
 .ring:nth-child(10) {
   transform: rotateY(4deg) rotateX(75deg) scale(1.5);
-  border-style: dashed;
+  border-style: dotted;
+  color:greenyellow;
 }
 
 .project-content {
