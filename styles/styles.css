@@ -166,7 +166,7 @@ html {
   }
 
   .about-video video {
-    width: 70%; /* Adjust video width for smaller screens */
+    width: 80%; /* Adjust video width for smaller screens */
     margin: 0 auto; /* Center video */
   }
 
